@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+/* Personnalisation style */
+
+/* Sélecteur universel */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+@font-face {
+	font-family: w;
+	src: url("../FONT/WanoQuin-ExtraBold.otf");
+}
+
+body {
+	overflow-x: hidden;
+	font-family: "Poppins",sans-serif;
+	color: #141414;
+	background-image: url("https://media.lelombrik.net/t/466986b2248bb99c88b30e25875ef1e3/f/466986b2248bb99c88b30e25875ef1e3.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Personnalisation de la barre d'avancement slon la position sur la page */
+
+.Barre {
+	z-index: 1;
+	position: fixed;
+	bottom: 5px;
+	left: 0;
+	-webkit-appearance: none;
+	appearance: none;
+	width: 100%;
+	height: 8px;
+	border: none;
+	background: transparent;
+}
+
+.Barre::-webkit-progress-bar {
+	background: inherit;
+}
+
+.Barre::-webkit-progress-value {
+	background: #8f44fd;
+}
+
+/* Personnalisation header comportant le Menu */
+
+.Menu {
+	display: flex;
+	z-index: 1000;
+	position: fixed;
+	top: 0;
+	align-items: center;
+	justify-content: space-between;
+	width: 100vw;
+	padding: 1rem 3rem;
+	border-bottom: 1px solid #141414;
+	color: #141414;
+	background-color: #fff;
+}
+
+/* Personnalisation bande défilante */
+
+.Menu .Action {
+	position: absolute;
+	bottom: 0;
+	width: 50px;
+	height: 2px;
+	background: linear-gradient(90deg , transparent , #141414);
+	animation: animate 5s infinite linear;
+}
+
+@keyframes animate {
+	0% {
+		left: 0;
+		transform: translate(-100%);
+	}
+
+	100% {
+		left: 100%;
+		transform: translate(0%);
+	}
+}
+
+/* Personnalisation contenu du menu */
+
+.Logo {
+	text-transform: capitalize;
+	font-family: w;
+	font-size: 30px;
+	cursor: pointer;
+}
+
+.Contenu {
+	display: flex;
+	flex-direction: row;
+	text-transform: uppercase;
+	font-weight: 300;
+	list-style: none;
+	gap: 5rem;
+}
+
+nav ul li a {
+	position: relative;
+}
+
+nav ul li a::before {
+	content: attr(data-text);
+	position: absolute;
+	width: 0;
+	border-bottom: 2px solid cyan;
+	overflow: hidden;
+	color: transparent;
+	transition: 1s;
+}
+
+nav ul li a:hover::before {
+	width: 100%;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: #141414;
+}
+
+.btn {
+	display: none;
+}
+
+/* Formulaire */
+
+form {
+	width: 400px;
+	background-color: #fff;
+	margin-top: 8em;
+	padding: 1em;
+	border-radius: 1em;
+	margin-bottom: 5em;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 0.5em;
+	margin-right: 0;
+}
+
+section {
+	padding: 20px;
+	border-radius: 5px;	
+}
+
+label {
+	font-weight: bold;
+}
+
+input[type="text"],
+input[type="file"],
+textarea,
+select {
+	width: 100%;
+	padding: 10px;
+	margin: 5px 0;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	font-size: 16px;
+}
+
+fieldset {
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 10px;
+	margin: 10px 0;
+}
+
+legend {
+	font-weight: bold;
+}
+
+input[type="checkbox"] {
+	margin-right: 5px;
+}
+
+input[type="submit"] {
+	background-color: #333;
+	color: #fff;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 5px;
+	font-size: 18px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+	background-color: #66ccff;
+}

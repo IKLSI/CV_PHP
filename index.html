@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="FR">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>Générateur de CV en ligne</title>
+
+		<link rel="stylesheet" href="./CSS/style.css">
+	</head>
+	<body>
+		<header>
+			<nav class="Menu">
+				<span class="Action"></span>
+				<div class="Logo">KLS</div>
+				<ul class="Contenu">
+					<li>
+						<a href="#Accueil" data-text="Accueil">Générateur de CV</a>
+					</li>
+				</ul>
+				<div class="btn">
+					<svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="2em" width="2em" xmlns="http://www.w3.org/2000/svg">
+						<path d="M32 96v64h448V96H32zm0 128v64h448v-64H32zm0 128v64h448v-64H32z"></path>
+					</svg>
+				</div>
+			</nav>
+		</header>
+		<section>
+			<form action="./PHP/generer_cv.php" method="POST">
+				<label for="name">Nom prénom</label>
+				<input type="text" name="name" id="name" placeholder="Nom" required/>
+				<label for="telephone">Téléphone</label>
+				<input type="text" name="telephone" id="telephone" placeholder="Téléphone" required/>
+				<label for="email">Email</label>
+				<input type="text" name="email" id="email" placeholder="Email" required/>
+				<label for="site">Site internet</label>
+				<input type="text" name="site" id="site" placeholder="Site internet" required/>
+				<label for="adresse">Adresse</label>
+				<input type="text" name="adresse" id="adresse" placeholder="Adresse" required/>
+				<label for="formation">Formation</label>
+				<textarea name="formation" id="formation" placeholder="Formation" required></textarea>
+				<label for="loisir">Loisir</label>
+				<textarea name="loisir" id="loisir" placeholder="Loisir" required></textarea>
+				<label for="langage">Langage</label>
+				<input type="text" name="langage" id="langage" placeholder="Langage" required/>
+
+				<label for="poste">Intitulé du poste</label>
+				<input type="text" name="poste" id="poste" placeholder="Intitulé" required/>
+				<label for="profil">Porfil personnel</label>
+				<textarea name="profil" id="profil" placeholder="Profil" required></textarea>
+				<label for="experience">Expérience</label>
+				<input type="text" name="experience" id="experience" placeholder="Expérience" required/>
+				<label for="competence">Compétence</label>
+				<input type="text" name="competence" id="competence" placeholder="Compétence" required/>
+				<label for="qualite">Qualité</label>
+				<input type="text" name="qualite" id="qualite" placeholder="Qualité" required/>
+				<label for="image">Image</label>
+				<input type="text" name="image" id="image" placeholder="Image" required/>
+
+				<input type="submit" value="Valider"/>
+				<input type="submit" value="Annuler"/>
+			</form>
+		</section>
+	</body>
+</html>
