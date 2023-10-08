@@ -1,5 +1,7 @@
 # Générateur de CV en PHP
 
+![Apercu](./ASSETS/Apercu.png)
+
 Ce projet est un générateur de CV en PHP qui vous permet de créer rapidement et facilement votre propre CV en ligne. Vous pouvez remplir les informations pertinentes dans le formulaire, et le générateur générera automatiquement un CV au format HTML pouvant être téléchargé directement sur le navigateur.
 
 ## Fonctionnalités

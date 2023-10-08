@@ -35,52 +35,48 @@
 					$langage_formate = str_replace(' ', '<br><br> ', $informations['langage']);
 					$telephone_formate = implode('.', str_split($informations['telephone'], 2));
 
-					echo "<img src='{$informations['image']}' alt='image' width='100px' height='100px' id='image'><br>";
-					echo "<i class='fas fa-phone-alt'></i>";
-					echo "<span>$telephone_formate</span><br>";
-					echo "<i class='fas fa-envelope'></i>";
-					echo "<span>{$informations['email']}</span><br>";
-					echo "<i class='fas fa-globe'></i>";
-					echo "<span>{$informations['site']}</span><br>";
-					echo "<i class='fas fa-map-marker-alt'></i>";
-					echo "<span>{$informations['adresse']}</span><br>";
+					echo "<img src='{$informations['image']}' alt='image' width='100px' height='100px' id='image'><br>
+					<i class='fas fa-phone-alt'></i>
+					<span>$telephone_formate</span><br>
+					<i class='fas fa-envelope'></i>
+					<span>{$informations['email']}</span><br>
+					<i class='fas fa-globe'></i>
+					<span>{$informations['site']}</span><br>
+					<i class='fas fa-map-marker-alt'></i>
+					<span>{$informations['adresse']}</span><br>
 
-					echo "<h2>Formations</h2>";
-					echo "<hr><br>";
-					echo "<p>{$informations['formation']}</p>";
-					echo "<h2>Loisirs</h2>";
-					echo "<hr><br>";
-					echo "<p>$loisir_formate</p>";
-					echo "<h2>Langages</h2>";
-					echo "<hr><br>";
-					echo "<p>$langage_formate</p>";
+					<h2>Formations</h2>
+					<hr><br>
+					<p>{$informations['formation']}</p>
+					<h2>Loisirs</h2>
+					<hr><br>
+					<p>$loisir_formate</p>
+					<h2>Langages</h2>
+					<hr><br>
+					<p>$langage_formate</p>
+					</div>
+					<div class='right-column'>
+					<h1 class='nom'>{$informations['nom']}</h1>
+					<p class='poste'>{$informations['poste']}</p>
+					<h2>Profil Personnel</h2>
+					<hr><br>
+					<p>{$informations['profil']}</p>
+					<h2>Expérience</h2>
+					<hr><br>
+					<p>{$informations['experience']}</p>
+					<div class='competences'>
+					<div class='colonne-gauche'>
+					<h2>Compétences</h2>
+					<hr><br>
+					<p>{$informations['competence']}</p>
+					</div>
+					<div class='colonne-droite'>
+					<h2>Qualités</h2>
+					<hr><br>
+					<p>{$informations['qualite']}</p>
+					</div>
+					</div>";
 				}
-			?>
-		</div>
-		<div class="right-column">
-			<?php
-				echo "<h1 class='nom'>{$informations['nom']}</h1>";
-				echo "<p class='poste'>{$informations['poste']}</p>";
-				echo "<h2>Profil Personnel</h2>";
-				echo "<hr><br>";
-				echo "<p>{$informations['profil']}</p>";
-				echo "<h2>Expérience</h2>";
-				echo "<hr><br>";
-				echo "<p>{$informations['experience']}</p>";
-
-				echo "<div class='competences'>";
-				echo "<div class='colonne-gauche'>";
-				echo "<h2>Compétences</h2>";
-				echo "<hr><br>";
-				echo "<p>{$informations['competence']}</p>";
-				echo "</div>";
-
-				echo "<div class='colonne-droite'>";
-				echo "<h2>Qualités</h2>";
-				echo "<hr><br>";
-				echo "<p>{$informations['qualite']}</p>";
-				echo "</div>";
-				echo "</div>";
 			?>
 		</div>
 	</div>
